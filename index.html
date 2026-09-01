@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>PIPIS DOG FASHION | Περιστέρι</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    background-color: #C9A07A;
+
+    color: #111111;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 32px 16px 30px;
+
+    font-family:
+        'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+
+    position: relative;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   SUBTLE DOG / PET BACKGROUND
+========================================= */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    opacity: 0.055;
+
+    background-image:
+
+        /* PAW */
+
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Cg fill='none' stroke='%23000000' stroke-width='2'%3E%3Cellipse cx='150' cy='170' rx='42' ry='55'/%3E%3Cellipse cx='92' cy='105' rx='17' ry='24' transform='rotate(-25 92 105)'/%3E%3Cellipse cx='125' cy='78' rx='17' ry='24' transform='rotate(-10 125 78)'/%3E%3Cellipse cx='160' cy='78' rx='17' ry='24' transform='rotate(10 160 78)'/%3E%3Cellipse cx='193' cy='105' rx='17' ry='24' transform='rotate(25 193 105)'/%3E%3C/g%3E%3C/svg%3E"),
+
+        /* DOG BONE */
+
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='330' height='330' viewBox='0 0 330 330'%3E%3Cg fill='none' stroke='%23000000' stroke-width='2'%3E%3Cpath d='M90 130c-18-18-43-18-55 0-12 17-4 37 13 44-17 9-19 31-6 45 13 15 37 13 49-3l57-50 57 50c12 16 36 18 49 3 13-14 11-36-6-45 17-7 25-27 13-44-12-18-37-18-55 0l-28 24-28-24-28 24-28-24Z'/%3E%3C/g%3E%3C/svg%3E"),
+
+        /* DOG COLLAR */
+
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='350' height='350' viewBox='0 0 350 350'%3E%3Cg fill='none' stroke='%23000000' stroke-width='2'%3E%3Cpath d='M55 125c50 90 190 90 240 0'/%3E%3Cpath d='M75 145c55 65 145 65 200 0'/%3E%3Ccircle cx='175' cy='215' r='25'/%3E%3Cpath d='M163 205l12-12 12 12-12 18-12-18Z'/%3E%3C/g%3E%3C/svg%3E");
+
+    background-repeat:
+
+        no-repeat,
+        no-repeat,
+        no-repeat;
+
+    background-size:
+
+        300px 300px,
+        330px 330px,
+        350px 350px;
+
+    background-position:
+
+        -70px 80px,
+        calc(100% + 80px) 430px,
+        50px calc(100% - 180px);
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+
+    width: 100%;
+
+    max-width: 480px;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   PIPIS
+========================================= */
+
+.brand-main {
+
+    margin-top: 5px;
+
+    font-family:
+        'Playfair Display',
+        Georgia,
+        serif;
+
+    font-size: 5.4rem;
+
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+    line-height: 0.85;
+
+    color: #111111;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 4px 8px rgba(0,0,0,0.10);
+}
+
+
+/* =========================================
+   ONLY "IS" IS PINK
+========================================= */
+
+.pink-is {
+
+    color: #e58aa8;
+}
+
+
+/* =========================================
+   DOG FASHION
+========================================= */
+
+.brand-sub {
+
+    margin-top: 13px;
+
+    margin-left: 92px;
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size: 2.35rem;
+
+    font-weight: 500;
+
+    font-style: italic;
+
+    letter-spacing: 1px;
+
+    color: #111111;
+
+    line-height: 0.75;
+
+    transform: rotate(-2deg);
+}
+
+
+/* =========================================
+   ADDRESS
+========================================= */
+
+.address {
+
+    margin-top: 28px;
+
+    margin-bottom: 40px;
+
+    font-size: 0.92rem;
+
+    font-weight: 500;
+
+    color: #111111;
+
+    opacity: 0.72;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================================
+   BUTTON CONTAINER
+========================================= */
+
+.links-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    width: 100%;
+
+    min-height: 80px;
+
+    padding: 15px 19px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #171717,
+            #090909
+        );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 0.96rem;
+
+    font-weight: 600;
+
+    border-radius: 15px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    box-shadow:
+
+        0 8px 16px
+        rgba(0,0,0,0.25),
+
+        inset 0 1px 0
+        rgba(255,255,255,0.05);
+
+    transition:
+
+        transform 0.2s ease,
+
+        background 0.2s ease,
+
+        box-shadow 0.2s ease;
+}
+
+
+.btn:hover {
+
+    transform: translateY(-2px);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #242424,
+            #101010
+        );
+
+    box-shadow:
+
+        0 11px 21px
+        rgba(0,0,0,0.30);
+}
+
+
+.btn:active {
+
+    transform: translateY(1px);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.icon {
+
+    width: 43px;
+
+    min-width: 43px;
+
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-right: 16px;
+
+    color: #ffffff;
+}
+
+
+.icon svg {
+
+    width: 30px;
+
+    height: 30px;
+
+    stroke: currentColor;
+
+    fill: none;
+
+    stroke-width: 2;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+
+/* =========================================
+   BUTTON TEXT
+========================================= */
+
+.btn-text {
+
+    text-align: left;
+
+    flex: 1;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.arrow {
+
+    font-size: 31px;
+
+    font-weight: 300;
+
+    margin-left: 8px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    margin-top: 42px;
+
+    font-size: 0.70rem;
+
+    color: #111111;
+
+    opacity: 0.65;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 25px 15px 25px;
+    }
+
+
+    .brand-main {
+
+        font-size: 4.5rem;
+
+        letter-spacing: 3px;
+    }
+
+
+    .brand-sub {
+
+        font-size: 2rem;
+
+        margin-left: 75px;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    .address {
+
+        margin-top: 24px;
+
+        margin-bottom: 32px;
+
+        font-size: 0.86rem;
+    }
+
+
+    .links-container {
+
+        gap: 13px;
+    }
+
+
+    .btn {
+
+        min-height: 76px;
+
+        padding: 14px 16px;
+
+        font-size: 0.92rem;
+
+        border-radius: 13px;
+    }
+
+
+    .icon {
+
+        width: 38px;
+
+        min-width: 38px;
+
+        height: 38px;
+
+        margin-right: 13px;
+    }
+
+
+    .icon svg {
+
+        width: 27px;
+
+        height: 27px;
+    }
+
+
+    .arrow {
+
+        font-size: 29px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .brand-main {
+
+        font-size: 4rem;
+
+        letter-spacing: 2px;
+    }
+
+
+    .brand-sub {
+
+        font-size: 1.7rem;
+
+        margin-left: 60px;
+    }
+
+
+    .address {
+
+        font-size: 0.80rem;
+    }
+
+
+    .btn {
+
+        min-height: 72px;
+
+        font-size: 0.87rem;
+
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .icon {
+
+        width: 34px;
+
+        min-width: 34px;
+
+        margin-right: 10px;
+    }
+
+
+    .icon svg {
+
+        width: 25px;
+
+        height: 25px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- =====================================
+         BRAND
+    ====================================== -->
+
+    <div class="brand-main">
+
+        PIP<span class="pink-is">IS</span>
+
+    </div>
+
+
+    <div class="brand-sub">
+
+        Dog Fashion
+
+    </div>
+
+
+    <!-- ADDRESS -->
+
+    <div class="address">
+
+        Θίσβης 1, Περιστέρι
+
+    </div>
+
+
+    <!-- =====================================
+         BUTTONS
+    ====================================== -->
+
+    <div class="links-container">
+
+
+        <!-- GOOGLE REVIEW -->
+
+        <a
+            href="https://search.google.com/local/writereview?placeid=ChIJGRtSmYGjoRQRnL3mfdPKyyU"
+
+            target="_blank"
+
+            rel="noopener noreferrer"
+
+            class="btn"
+        >
+
+            <span class="icon">
+
+                <svg viewBox="0 0 24 24">
+
+                    <path
+                        d="M12 3.5
+                           L14.6 8.8
+                           L20.5 9.6
+                           L16.2 13.8
+                           L17.2 19.7
+                           L12 16.9
+                           L6.8 19.7
+                           L7.8 13.8
+                           L3.5 9.6
+                           L9.4 8.8
+                           Z"
+                    />
+
+                </svg>
+
+            </span>
+
+
+            <span class="btn-text">
+
+                Αξιολογήστε μας στο Google
+
+            </span>
+
+
+            <span class="arrow">
+
+                ›
+
+            </span>
+
+        </a>
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+            href="https://www.instagram.com/pipisdogfashion"
+
+            target="_blank"
+
+            rel="noopener noreferrer"
+
+            class="btn"
+        >
+
+            <span class="icon">
+
+                <svg viewBox="0 0 24 24">
+
+                    <rect
+                        x="3"
+                        y="3"
+                        width="18"
+                        height="18"
+                        rx="5"
+                    />
+
+                    <circle
+                        cx="12"
+                        cy="12"
+                        r="4"
+                    />
+
+                    <circle
+                        cx="17.5"
+                        cy="6.5"
+                        r="1"
+                        fill="currentColor"
+                        stroke="none"
+                    />
+
+                </svg>
+
+            </span>
+
+
+            <span class="btn-text">
+
+                Βρείτε μας στο Instagram
+
+            </span>
+
+
+            <span class="arrow">
+
+                ›
+
+            </span>
+
+        </a>
+
+
+        <!-- FACEBOOK -->
+
+        <a
+            href="https://www.facebook.com/share/1DR13N9Ah3/?mibextid=wwXIfr"
+
+            target="_blank"
+
+            rel="noopener noreferrer"
+
+            class="btn"
+        >
+
+            <span class="icon">
+
+                <svg viewBox="0 0 24 24">
+
+                    <path
+                        d="M14 8h3V4h-3
+                           c-3 0-5 2-5 5v3H6v4h3v6h4v-6h3l1-4h-4V9
+                           c0-.7.3-1 1-1Z"
+                    />
+
+                </svg>
+
+            </span>
+
+
+            <span class="btn-text">
+
+                Βρείτε μας στο Facebook
+
+            </span>
+
+
+            <span class="arrow">
+
+                ›
+
+            </span>
+
+        </a>
+
+
+        <!-- WEBSITE -->
+
+        <a
+            href="https://pipisdogfashion.gr/"
+
+            target="_blank"
+
+            rel="noopener noreferrer"
+
+            class="btn"
+        >
+
+            <span class="icon">
+
+                <svg viewBox="0 0 24 24">
+
+                    <circle
+                        cx="12"
+                        cy="12"
+                        r="9"
+                    />
+
+                    <path d="M3 12h18"/>
+
+                    <path
+                        d="M12 3
+                           C15 6
+                           16 9
+                           16 12
+                           C16 15
+                           15 18
+                           12 21"
+                    />
+
+                    <path
+                        d="M12 3
+                           C9 6
+                           8 9
+                           8 12
+                           C8 15
+                           9 18
+                           12 21"
+                    />
+
+                </svg>
+
+            </span>
+
+
+            <span class="btn-text">
+
+                Επισκεφθείτε την ιστοσελίδα μας
+
+            </span>
+
+
+            <span class="arrow">
+
+                ›
+
+            </span>
+
+        </a>
+
+
+        <!-- PHONE -->
+
+        <a
+            href="tel:2105750104"
+
+            class="btn"
+        >
+
+            <span class="icon">
+
+                <svg viewBox="0 0 24 24">
+
+                    <path
+                        d="M6.5 3.5
+                           L9.5 3
+                           L11 7
+                           L8.5 8.5
+                           C9.7 11.1
+                           11.9 13.4
+                           14.7 14.7
+                           L16 12
+                           L20 13.5
+                           L19.5 17
+                           C19.3 18.4
+                           18.1 19.5
+                           16.7 19.3
+                           C9.4 18.2
+                           5.8 14.6
+                           4.7 7.3
+                           C4.5 5.9
+                           5.3 4
+                           6.5 3.5Z"
+                    />
+
+                </svg>
+
+            </span>
+
+
+            <span class="btn-text">
+
+                Καλέστε μας
+
+            </span>
+
+
+            <span class="arrow">
+
+                ›
+
+            </span>
+
+        </a>
+
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        &copy; PIPIS DOG FASHION. All rights reserved.
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
